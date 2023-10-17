@@ -7,19 +7,19 @@ import utilities.Driver;
 
 public class QualitydemyPage {
 
-    public QualitydemyPage() {
-
-        PageFactory.initElements(Driver.getDriver(), this);
+    public QualitydemyPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(linkText = "Log in")
-    public WebElement ilkLoginButonu;
+    public WebElement ilkLoginLinki;
+
     @FindBy(id = "login-email")
     public WebElement emailKutusu;
+
     @FindBy(id = "login-password")
     public WebElement passwordKutusu;
-    @FindBy(linkText = "Accept")
-    public WebElement acceptCookies;
+
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement loginButonu;
 

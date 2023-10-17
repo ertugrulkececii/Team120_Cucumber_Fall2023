@@ -7,22 +7,23 @@ import utilities.Driver;
 
 public class FacebookPage {
 
-
-    public FacebookPage() {
-
-        PageFactory.initElements(Driver.getDriver(), this);
-
-
+    public FacebookPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id = "email")
+    @FindBy(id ="email")
     public WebElement emailKutusu;
-    @FindBy(id = "pass")
+
+    @FindBy(id ="pass")
     public WebElement passwordKutusu;
-    @FindBy(xpath = "//button[@name='login']")
+
+    @FindBy(xpath = "//*[@type='submit']")
     public WebElement loginButonu;
-    @FindBy(xpath = "//*[@*='accept_button']")
+
+    @FindBy(xpath = "//*[@*='Allow all cookies']")
     public WebElement cookiesKabulButonu;
+
     @FindBy(xpath = "//div[@class='_9ay7']")
     public WebElement girisYapilamadiYaziElementi;
+
 }

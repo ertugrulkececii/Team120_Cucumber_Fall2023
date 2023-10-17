@@ -2,6 +2,7 @@
 Feature: US1004 Gecersiz bilgilerle giris yapilamaz
 
   Scenario: TC06 gecerli email, gecersiz password ile giris yapilamaz
+
     Given kullanici "qdUrl" anasayfaya gider
     Then ilk login linkine tiklar
     And username kutusuna "qdGecerliEmail" yazar
@@ -9,8 +10,9 @@ Feature: US1004 Gecersiz bilgilerle giris yapilamaz
     And login butonuna basar
     Then basarili giris yapilamadigini test eder
     And sayfayi kapatir
-
+  @nlt2
   Scenario: TC07 gecersiz email,gecerli password ile giris yapilamaz
+
     Given kullanici "qdUrl" anasayfaya gider
     Then ilk login linkine tiklar
     And username kutusuna "qdGecersizEmail" yazar
@@ -20,6 +22,7 @@ Feature: US1004 Gecersiz bilgilerle giris yapilamaz
     And sayfayi kapatir
 
   Scenario: TC08 gecersiz email, gecersiz password ile giris yapilamaz
+
     Given kullanici "qdUrl" anasayfaya gider
     Then ilk login linkine tiklar
     And username kutusuna "qdGecersizEmail" yazar
