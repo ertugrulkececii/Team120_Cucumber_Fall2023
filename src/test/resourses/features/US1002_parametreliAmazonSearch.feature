@@ -1,3 +1,4 @@
+@wip
 Feature: US1002 Kullanici parametre olarak yazdigi urunu amazonda aratir
 
   Scenario: TC03 parametre ile amazonda arama

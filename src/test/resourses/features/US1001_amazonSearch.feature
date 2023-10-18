@@ -1,4 +1,4 @@
-
+@wip
 Feature: US1001 Kullanici amazon anasayfada arama yapar
 
   @smoke

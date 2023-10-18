@@ -1,3 +1,4 @@
+@wip
 Feature: US1007 liste olarak verilen kullanici adi ve sifrelerle giris yapilamadigini test eder
 
 

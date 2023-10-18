@@ -1,3 +1,4 @@
+@wip
 Feature: US1006 verilen listedeki urunleri google'da arama
 
   # verilen listedeki her urunu google'da aratip
