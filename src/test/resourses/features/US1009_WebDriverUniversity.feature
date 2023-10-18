@@ -1,4 +1,4 @@
-@wip
+
 Feature: US1009 Webdriver university testi
   Scenario: TC13 coklu window testi
 

@@ -1,4 +1,4 @@
-@wip
+
 Feature: US1005 kullanici amazonda arama yapip ilk urunu test eder
 
 
