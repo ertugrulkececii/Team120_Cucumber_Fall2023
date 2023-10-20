@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AmazonPage {
+
     /*
         TestNG'de page class'lari
         surekli kullandigimiz bir sayfa/webSitesi'ndeki
@@ -31,4 +32,6 @@ public class AmazonPage {
 
     @FindBy(xpath = "//span[@class='a-size-large product-title-word-break']")
     public WebElement ilkUrunIsimElementi;
+    @FindBy (xpath = "//select[@id='searchDropdownBox']")
+    public WebElement dropDownElement;
 }

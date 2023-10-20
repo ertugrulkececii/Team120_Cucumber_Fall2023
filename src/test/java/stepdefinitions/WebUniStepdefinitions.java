@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -72,5 +73,49 @@ public class WebUniStepdefinitions {
     @And("sayfalari kapatir")
     public void sayfalariKapatir() {
         Driver.quitDriver();
+    }
+
+    //=======================US1013==================================================================
+    @Given("Our Products butonuna basar")
+    public void our_products_butonuna_basar() {
+
+    }
+    @Then("acilan sayfada Cameras'i tiklar")
+    public void acilan_sayfada_cameras_i_tiklar() {
+
+    }
+    @Then("Popup mesajini yazdirir")
+    public void popup_mesajini_yazdirir() {
+
+    }
+    @Then("close butonuna basar")
+    public void close_butonuna_basar() {
+
+    }
+    @Then("iFrame'den cikis yapar")
+    public void i_frame_den_cikis_yapar() {
+
+    }
+    @Then("WebdriverUniversity.com (IFrame) linkini tiklar")
+    public void webdriver_university_com_i_frame_linkini_tiklar() {
+
+    }
+    @Then("acilan sayfa url'inin http://webdriveruniversity.com/index.html oldugunu test eder")
+    public void acilan_sayfa_url_inin_http_webdriveruniversity_com_index_html_oldugunu_test_eder() {
+
+    }
+
+    @And("acilan sayfa url'inin {string} oldugunu test eder")
+    public void acilanSayfaUrlIninOldugunuTestEder(String arg0) {
+        
+    }
+
+    @And("WebdriverUniversity.com \\(IFrame) linkini tiklar")
+    public void webdriveruniversityComIFrameLinkiniTiklar() {
+        
+    }
+
+    @And("ourProduct linkine tiklamak icin iFrame'e gecis yapar")
+    public void ourproductLinkineTiklamakIcinIFrameEGecisYapar() {
     }
 }
