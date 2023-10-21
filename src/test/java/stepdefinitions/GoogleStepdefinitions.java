@@ -26,6 +26,6 @@ public class GoogleStepdefinitions {
 
     @And("cookies kabul eder")
     public void cookiesKabulEder() {
-       // googlePage.cookiesKabulButonu.click();
+        googlePage.cookiesKabulButonu.click();
     }
 }

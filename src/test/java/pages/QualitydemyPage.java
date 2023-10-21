@@ -7,8 +7,8 @@ import utilities.Driver;
 
 public class QualitydemyPage {
 
-    public QualitydemyPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public QualitydemyPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(linkText = "Log in")
@@ -22,8 +22,12 @@ public class QualitydemyPage {
 
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement loginButonu;
-
-    @FindBy(linkText = "My courses")
+    //   //button[text()='Login']
+    @FindBy(xpath = "//a[normalize-space()='Instructor']")
     public WebElement basariliGirisElementi;
-
+    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
+    public WebElement qdcookies2;
 }
+
+
+

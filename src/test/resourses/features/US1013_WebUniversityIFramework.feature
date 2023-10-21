@@ -8,6 +8,6 @@ Then acilan sayfada Cameras'i tiklar
 And Popup mesajini yazdirir
 And close butonuna basar
 Then iFrame'den cikis yapar
-And WebdriverUniversity.com (IFrame) linkini tiklar
+And WebdriverUniversity.com IFrame linkini tiklar
 And acilan sayfa url'inin "http://webdriveruniversity.com index.html" oldugunu test eder
 And sayfayi kapatir

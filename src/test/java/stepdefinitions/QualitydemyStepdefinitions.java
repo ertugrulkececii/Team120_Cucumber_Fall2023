@@ -47,4 +47,10 @@ public class QualitydemyStepdefinitions {
     public void passwordKutusunaExamplesDanYazar(String kullaniciPassword) {
         qualitydemyPage.passwordKutusu.sendKeys(kullaniciPassword);
     }
+
+
+    @Then("qdcookies kabul eder")
+    public void qdcookiesKabulEder() {
+        qualitydemyPage.qdcookies2.click();
+    }
 }

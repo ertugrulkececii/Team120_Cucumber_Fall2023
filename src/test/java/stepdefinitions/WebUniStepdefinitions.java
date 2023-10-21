@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import pages.WebUniPage;
 import utilities.Driver;
@@ -47,15 +48,15 @@ public class WebUniStepdefinitions {
     }
     @Then("Popup'ta cikan yazinin validation failed oldugunu test eder")
     public void popup_ta_cikan_yazinin_validation_failed_oldugunu_test_eder() {
-        ReusableMethods.bekle(7);
+        ReusableMethods.bekle(1);
         String expectedAlertYazisi = "validation failed";
         String actualAlertYazisi = Driver.getDriver().switchTo().alert().getText();
-        System.out.println("============"+actualAlertYazisi);
         Assert.assertEquals(expectedAlertYazisi,actualAlertYazisi);
     }
     @Then("Ok diyerek Popup'i kapatir")
     public void ok_diyerek_popup_i_kapatir() {
         Driver.getDriver().switchTo().alert().accept();
+
     }
     @When("Ilk sayfaya geri doner")
     public void ilk_sayfaya_geri_doner() {
@@ -75,47 +76,40 @@ public class WebUniStepdefinitions {
         Driver.quitDriver();
     }
 
-    //=======================US1013==================================================================
+    @Given("ourProduct linkine tiklamak icin iFrame'e gecis yapar")
+    public void our_product_linkine_tiklamak_icin_i_frame_e_gecis_yapar() {
+        Driver.getDriver().switchTo().frame(webUniPage.iFrameElementi);
+    }
     @Given("Our Products butonuna basar")
     public void our_products_butonuna_basar() {
-
+        webUniPage.ourProductLinki.click();
     }
     @Then("acilan sayfada Cameras'i tiklar")
     public void acilan_sayfada_cameras_i_tiklar() {
-
+        webUniPage.camerasElementi.click();
     }
     @Then("Popup mesajini yazdirir")
     public void popup_mesajini_yazdirir() {
-
+        System.out.println(webUniPage.alertYaziElementi.getText());
     }
     @Then("close butonuna basar")
     public void close_butonuna_basar() {
-
+        webUniPage.alertKapatButonu.click();
     }
     @Then("iFrame'den cikis yapar")
     public void i_frame_den_cikis_yapar() {
-
+        Driver.getDriver().switchTo().defaultContent();
     }
     @Then("WebdriverUniversity.com (IFrame) linkini tiklar")
     public void webdriver_university_com_i_frame_linkini_tiklar() {
-
-    }
-    @Then("acilan sayfa url'inin http://webdriveruniversity.com/index.html oldugunu test eder")
-    public void acilan_sayfa_url_inin_http_webdriveruniversity_com_index_html_oldugunu_test_eder() {
-
+        webUniPage.webDriverLinki.click();
     }
 
     @And("acilan sayfa url'inin {string} oldugunu test eder")
-    public void acilanSayfaUrlIninOldugunuTestEder(String arg0) {
-        
-    }
+    public void acilanSayfaUrlIninOldugunuTestEder(String expectedUrl) {
 
-    @And("WebdriverUniversity.com \\(IFrame) linkini tiklar")
-    public void webdriveruniversityComIFrameLinkiniTiklar() {
-        
-    }
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
 
-    @And("ourProduct linkine tiklamak icin iFrame'e gecis yapar")
-    public void ourproductLinkineTiklamakIcinIFrameEGecisYapar() {
     }
 }

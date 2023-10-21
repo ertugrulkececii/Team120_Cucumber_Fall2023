@@ -1,4 +1,4 @@
-
+@heroku
 Feature: US1008
 
   Scenario: TC12 Kullanici bekleme islemlerini yapar
